@@ -4,7 +4,7 @@ from html.entities import name2codepoint
 import xlsxwriter
 
 
-with open('examples\only table.html', 'r', encoding='utf-8') as html_file_code:
+with open('examples\complex_example.html', 'r', encoding='utf-8') as html_file_code:
     html_code = html_file_code.read()
     
 
@@ -14,6 +14,8 @@ def print_html_test(table):
     table_dict = []
     row_index = 0
     for row in table.children:
+        if row.name != 'tr':
+            continue
         cell_index = 0
         if type(row).__name__ != 'NavigableString':
             table_dict.append([])
@@ -21,6 +23,7 @@ def print_html_test(table):
             table_dict[row_index]['context'] = 'table, tr'
             table_dict[row_index]['cells'] = []
             table_dict[row_index]['attrs'] = row.attrs
+
             for cell in row.children:
                 if type(cell).__name__ != 'NavigableString':
                     table_dict[row_index]['cells'].append([])
