@@ -1,0 +1,58 @@
+<style>
+   @page {
+       size: Letter;
+       margin: 1cm;
+   }
+   
+   * {
+       font-family: arial, sans-serif;
+       font-size: 12px;
+   }
+   
+   table {
+       margin: 0.5cm 0 1cm;
+   }
+   
+   
+   table,
+   tr {
+       border-collapse: collapse;
+       width: 100%;
+   }
+   
+   th,
+   td {
+       border: 1px solid black;
+       border-collapse: collapse;
+       padding: 0.1cm 0.2cm;
+   }
+   
+</style>
+
+<table class='info'>
+    <tr>
+       <td rowspan='2' colspan='2'>MyBank
+          <div class='smallTitle'>Payee's bank</div>
+       </td>
+       <td>BIK</td>
+       <td rowspan='2'>
+          BIC
+          <div class='smallTitle'>2222</div>
+       </td>
+    </tr>
+    <tr>
+       <td>Account <span>&#8470;</span></td>
+    </tr>
+    <tr>
+       <td>INN 123</td>
+       <td>KPP 123456</td>
+       <td rowspan='2' class='valign'>Account <span>&#8470;</span></td>
+       <td rowspan='2' class='valign'>2123123</td>
+    </tr>
+    <tr>
+       <td colspan='2'>
+          Mycompany
+          <div class='smallTitle'>Recipient</div>
+       </td>
+    </tr>
+ </table>
